@@ -1,28 +1,36 @@
 #ifndef CLUB_HPP
 #define CLUB_HPP
+#include <iostream>
+#include <vector>
 #include "player.hpp"
 #include "gameLineup.hpp"
 using namespace std;
+//Pablo de la Iglesia
 class Club{
     private:
         int clubId;
-        int domesticCompetitionId;
+        string domesticCompetitionId;
         string clubName;
         int squadSize;
         float averageAge;
         string stadiumName;
-        string coachAnme;
-        Player players[];
+        string coachName;
+        vector<Player> players;
         int numberOfPlayers;
-        string lineup;
+        vector<gameLineup> lineup;
     public:
-        Club(int clubId,domesticCompetitionId,string clubName,squadSize,averageAge)
-        void setPlayers(Player players2[],int numberPlayers);
-        void showBestPlayers();
+        Club(int clubId,string domesticCompetitionId,
+            string clubName,int squadSize,float averageAge,string stadiumName);
+        void showBestPlayer();
         void sortPlayers();
+        void setLineupAndPlayers(vector<gameLineup> lineups,vector<Player> players2);
         string getCoachName();
         float getAverageAge();
-        void setLineup(gameLineup gameLineups[]);
-        void loadData();
+        string getClubName();
+		vector<Player> getPlayers();
+        int getClubId();
+        void showLineup();
+        string getDomesticCompetitionId();
+        int getSquadSize();
 };
 #endif

@@ -3,6 +3,7 @@
 #include "date.hpp"
 #include <iostream>
 using namespace std;
+//Pablo de la Iglesia
 class Player{
     private:
         int playerId;

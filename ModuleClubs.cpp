@@ -1,4 +1,5 @@
 #include "ModuleClubs.hpp"
+//Pablo de la Iglesia
 ModuleClubs::ModuleClubs(){
     ifstream infile("clubs.csv");
     string line = "   "; 
@@ -83,6 +84,7 @@ ModuleClubs::ModuleClubs(){
         }
     }
 }
+//Pablo de la Iglesia
 Date ModuleClubs::convertString(string word2){
     Date date;
     stringstream strstr(word2);
@@ -102,6 +104,7 @@ Date ModuleClubs::convertString(string word2){
     }
     return date;
 }
+//Pablo de la Iglesia
 void ModuleClubs::clubsMenu(){
     bool exit =false;
     int election;
@@ -129,6 +132,7 @@ void ModuleClubs::clubsMenu(){
         }
     }
 }
+//Pablo de la Iglesia
 void ModuleClubs::clubByName(){
     int election;
     vector<Club> results;
@@ -198,6 +202,7 @@ void ModuleClubs::clubByName(){
         cout<<"None results"<<endl;
     }
 }
+//Pablo de la Iglesia
 void ModuleClubs::generalClubsMenu(){
     int election;
     bool exit=false;
@@ -226,6 +231,7 @@ void ModuleClubs::generalClubsMenu(){
         }
     }
 }
+//Pablo de la Iglesia
 void ModuleClubs::showClubsByLeagues(){
     int election, position;
     vector<string> leagues;
@@ -256,6 +262,7 @@ void ModuleClubs::showClubsByLeagues(){
         }
     }
 }
+//Pablo de la Iglesia
 void ModuleClubs::sortClubs(){
     int election, min, max;
     cout<<"Sort Clubs"<<endl;
